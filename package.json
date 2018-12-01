@@ -1,0 +1,70 @@
+{
+  "name": "advent-of-code",
+  "version": "1.0.0",
+  "description": "Advent of Code 2018",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint",
+    "test": "ava day-*/**/*test.js"
+  },
+  "author": "Jonas Stenberg <jonas.d.stenberg@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "1.0.0-rc.2",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0"
+  },
+  "eslintConfig": {
+    "env": {
+      "es6": true,
+      "node": true
+    },
+    "extends": [
+      "airbnb-base"
+    ],
+    "parserOptions": {
+      "sourceType": "module"
+    },
+    "rules": {
+      "no-console": 0,
+      "no-restricted-syntax": [0, "ForInStatement", "ForOfStatement"],
+      "import/no-extraneous-dependencies": [
+        "error",
+        {
+          "devDependencies": ["day-*/**/*test.js"],
+          "optionalDependencies": false,
+          "peerDependencies": false
+        }
+      ],
+      "no-multiple-empty-lines": [
+        "error",
+        {
+          "max": 1
+        }
+      ],
+      "valid-jsdoc": [
+        "warn",
+        {
+          "requireParamDescription": false,
+          "requireReturnDescription": false
+        }
+      ],
+      "no-else-return": [
+        "error",
+        {
+          "allowElseIf": true
+        }
+      ],
+      "no-param-reassign": [
+        "error",
+        {
+          "props": true,
+          "ignorePropertyModificationsFor": [
+            "t"
+          ]
+        }
+      ]
+    }
+  }
+}
