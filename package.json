@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint",
-    "test": "ava day-*/**/*test.js"
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonasstenberg/advent-of-code-2018.git"
   },
   "author": "Jonas Stenberg <jonas.d.stenberg@gmail.com>",
   "license": "MIT",
