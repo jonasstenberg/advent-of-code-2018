@@ -1,8 +1,28 @@
-const { part1, part2 } = require('./solution');
-const readInput = require('../utils/read-input');
+/* eslint no-constant-condition: 0, no-continue: 0 */
 
-const input = readInput('./day-01/input.txt');
+const part1 = input => input.split('\n').reduce((a, c) => a + Number(c), 0);
 
-console.log('Day 1');
-console.log(`Part 1: ${part1(input)}`);
-console.log(`Part 2: ${part2(input)}`);
+const part2 = (input) => {
+  const arr = input.split('\n').map(Number);
+  const found = { 0: true };
+  let sum = 0;
+
+  while (true) {
+    for (const a of arr) {
+      if (a === 0) continue;
+
+      sum += a;
+
+      if (found[sum]) {
+        return sum;
+      }
+
+      found[sum] = true;
+    }
+  }
+};
+
+module.exports = {
+  part1,
+  part2,
+};

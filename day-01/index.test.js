@@ -1,6 +1,19 @@
 import test from 'ava';
 
-import { part1, part2 } from './solution';
+import readInput from '../utils/read-input';
+import { part1, part2 } from '.';
+
+test('Day 1, Part 1', (t) => {
+  const input = readInput('./day-01/input.txt');
+
+  t.is(part1(input), 500);
+});
+
+test('Day 1, Part 2', (t) => {
+  const input = readInput('./day-01/input.txt');
+
+  t.is(part2(input), 709);
+});
 
 test('should calculate frequency from +1, -2, +3, +1', (t) => {
   const changes = `+1
