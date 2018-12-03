@@ -32,12 +32,18 @@
     },
     "rules": {
       "no-console": 0,
-      "no-restricted-syntax": [0, "ForInStatement", "ForOfStatement"],
+      "no-restricted-syntax": [
+        0,
+        "ForInStatement",
+        "ForOfStatement"
+      ],
       "no-plusplus": "off",
       "import/no-extraneous-dependencies": [
         "error",
         {
-          "devDependencies": ["day-*/**/*test.js"],
+          "devDependencies": [
+            "day-*/**/*test.js"
+          ],
           "optionalDependencies": false,
           "peerDependencies": false
         }
