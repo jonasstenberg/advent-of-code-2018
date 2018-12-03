@@ -1,9 +1,7 @@
-const { resolve } = require('path');
-const { readFileSync } = require('fs');
-
 const { part1, part2 } = require('./solution');
+const readInput = require('../utils/read-input');
 
-const input = readFileSync(resolve(__dirname, './input.txt'), 'utf8');
+const input = readInput('./day-02/input.txt');
 
 console.log('Day 2');
 console.log(`Part 1: ${part1(input)}`);

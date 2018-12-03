@@ -28,7 +28,8 @@
       "airbnb-base"
     ],
     "parserOptions": {
-      "sourceType": "module"
+      "sourceType": "module",
+      "ecmaVersion": 10
     },
     "rules": {
       "no-console": 0,
